@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import CardDetails from "./components/CardDetails";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Header></Header>
       <Routes>
           <Route index element={<Home />} />
-          {/* <Route path='/details/:id' element={<CardDetails />} /> */}
+          <Route path='/details/:id' element={<CardDetails />} />
         </Routes>
     </>
   );
