@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Searchbar = ( {cards} ) => {
     const [search, setSearch] = useState("");
@@ -13,8 +14,9 @@ const Searchbar = ( {cards} ) => {
         console.log(card)
         return (
             <div>
+                <Link to={`/details/${card.id}`}>
                 <img src={card.images.small}/>
-                
+                </Link>
             </div>
         )
     })
