@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Searchbar from "./Searchbar";
 
+import classes from './Home.module.css'
+
 const Home = () => {
   const [cards, setCards] = useState({});
 
@@ -20,8 +22,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      Welcome to PokeCard Finder!
+    <div className={classes.home}>
+      <h1>Welcome to PokeCard Finder!</h1>
       <Searchbar cards={cards}></Searchbar>
     </div>
   );

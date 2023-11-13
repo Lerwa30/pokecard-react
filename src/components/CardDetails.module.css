@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    gap: 25%;
+    align-items: center;
+}
+
+.img {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
