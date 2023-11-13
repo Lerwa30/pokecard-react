@@ -13,10 +13,8 @@ const Searchbar = ( {cards} ) => {
         console.log(card)
         return (
             <div>
-                <span>{card.name}</span>
-                <span>{card.rarity}</span>
                 <img src={card.images.small}/>
-                <span>{card.tcgplayer.prices.holofoil.high}</span>
+                
             </div>
         )
     })
