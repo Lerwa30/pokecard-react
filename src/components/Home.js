@@ -15,13 +15,14 @@ const Home = () => {
       })
       .then((res) => {
         console.log(res.data.data);
+        setCards(res.data.data)
       });
   }, []);
 
   return (
     <div>
       Welcome to PokeCard Finder!
-      <Searchbar></Searchbar>
+      <Searchbar cards={cards}></Searchbar>
     </div>
   );
 };
