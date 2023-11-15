@@ -11,7 +11,7 @@ const Searchbar = ( {cards} ) => {
         let searchInput = search.toLowerCase();
         return cardName.includes(searchInput);
     }).map((card) => {
-        console.log(card)
+        // console.log(card)
         return (
             <div>
                 <Link to={`/details/${card.id}`}>
