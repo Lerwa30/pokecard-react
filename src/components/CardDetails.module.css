@@ -2,12 +2,12 @@
     display: flex;
     gap: 25%;
     align-items: center;
+    margin: 10%;
 }
 
 .img {
     display: flex;
     flex-direction: row;
-    margin: 20px;
 }
 
 .info {

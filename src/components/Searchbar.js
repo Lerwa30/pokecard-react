@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import classes from './Searchbar.module.css';
 
 const Searchbar = ( {cards} ) => {
     const [search, setSearch] = useState("");
@@ -23,7 +24,8 @@ const Searchbar = ( {cards} ) => {
 
     return (
         <section>
-            <div>
+            <div className={classes.searchbar}>
+                
                 <input
                 type="text"
                 placeholder="Search for a card..."
@@ -34,7 +36,7 @@ const Searchbar = ( {cards} ) => {
                 ></input>
             </div>
             {search.length > 2 && (
-            <div>{searchCards}</div>
+            <div className={classes.results}>{searchCards}</div>
         )}
         </section>
     )
