@@ -32,14 +32,16 @@ const CardDetails = () => {
   return (
     !isLoading && (
       <div className={classes.container}>
-        <img className={classes.img} src={card.images.small} loading="lazy" />
-        <div className={classes.info}>
-          <div>
-            <h2>{card.name}</h2>
-            <h5>{card.supertype}</h5>
+        <img className={classes.img} src={card.images.large} loading="lazy" />
+        <div>
+          <div className={classes.title}>
+            <h2>Name: {card.name}</h2>
+            <h4>Set: {card.set.name}</h4>
+            <h4>Rarity: {card.rarity}</h4>
           </div>
+          <p>Prices last updated on {card.tcgplayer.updatedAt}</p>
           {card.tcgplayer.prices.holofoil ? (
-            <div>
+            <div className={classes.prices}>
               <h3>Low Price: ${card.tcgplayer.prices.holofoil.low}</h3>
               <h3>High Price: ${card.tcgplayer.prices.holofoil.high}</h3>
               <h3>Current Price: ${card.tcgplayer.prices.holofoil.market}</h3>
@@ -51,6 +53,8 @@ const CardDetails = () => {
               <h3>Current Price: ${card.tcgplayer.prices.normal.market}</h3>
             </div>
           )}
+          <br></br>
+          <div>Purchase card at <a href={card.tcgplayer.url}>TCGPlayer</a></div>
         </div>
       </div>
     )

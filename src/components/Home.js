@@ -4,6 +4,8 @@ import axios from "axios";
 import Searchbar from "./Searchbar";
 
 import classes from "./Home.module.css";
+import pic from "./assets/pokecard.webp";
+
 
 const Home = () => {
   const [cards, setCards] = useState([]);
@@ -49,11 +51,22 @@ const Home = () => {
     fetchData();
   }, []);
 
-  return (
+  return ( <>
     <div className={classes.home}>
-      <h1>Welcome to PokeCard Finder!</h1>
+      <div
+     className={classes.pic}
+     style={{
+       background: `linear-gradient(
+     190deg,
+     rgba(0, 0, 0, 0.3),
+     rgba(0, 0, 0, 0.1)),
+     url(${pic})`,
+     backgroundSize: 'cover'
+     }}
+   ></div>
       <Searchbar cards={cards}></Searchbar>
     </div>
+   </>
   );
 };
 

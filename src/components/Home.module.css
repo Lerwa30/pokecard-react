@@ -5,3 +5,10 @@
     margin: 10px;
     gap: 25px;
 }
+
+.pic {
+    height: 400px;
+    width: 100%;
+    border: solid 2px lightslategray;
+    justify-content: center;
+}
