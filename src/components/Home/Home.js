@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import Searchbar from "./Searchbar";
 
 import classes from "./Home.module.css";
@@ -48,6 +47,7 @@ const Home = () => {
 
     fetchData();
   }, []);
+
 
   return (
     <>
