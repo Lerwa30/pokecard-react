@@ -4,7 +4,7 @@ import axios from "axios";
 import Searchbar from "./Searchbar";
 
 import classes from "./Home.module.css";
-import pic from "./assets/pokecard.webp";
+import pic from "../assets/pokecard.webp";
 
 
 const Home = () => {
