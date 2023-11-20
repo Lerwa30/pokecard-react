@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <div className={classes.header}>
-                <h2>Poke151 Finder</h2>
+                <h2>PokeCard Finder</h2>
                 <Link to='/'>
                 <a>Home</a>
                 </Link>
